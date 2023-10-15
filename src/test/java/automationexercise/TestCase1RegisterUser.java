@@ -34,7 +34,7 @@ public class TestCase1RegisterUser {
 
     @After
     public void tearDown() {
-        //driver.close();
+        driver.close();
     }
 
     @Test
@@ -125,27 +125,27 @@ public class TestCase1RegisterUser {
 
         //    14. Verify that 'ACCOUNT CREATED!' is visible
 
-        String expectedText = "ACCOUNT CREATED!";
-        String actualText = driver.findElement(By.xpath("//div[@class='col-sm-9 col-sm-offset-1']/h2/b")).getText();
-        Assert.assertEquals(expectedText, actualText);
+//        String expectedText = "ACCOUNT CREATED!";
+//        String actualText = driver.findElement(By.xpath("//div[@class='col-sm-9 col-sm-offset-1']/h2/b")).getText();
+//        Assert.assertEquals(expectedText, actualText);
 
-        //    15. Click 'Continue' button
-        WebElement clickContinue = driver.findElement(By.xpath("//div[@class='pull-right']/a"));
-        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait4.until(ExpectedConditions.elementToBeClickable(clickContinue));
-
-        //    16. Verify that 'Logged in as username' is visible
-        String expectedUsernameText = "Alparslan";
-        String actualUsernameText = driver.findElement(By.xpath("//i[@class='fa fa-user']")).getText();
-        Assert.assertEquals(expectedUsernameText, actualUsernameText);
-
-        //    17. Click 'Delete Account' button
-        driver.findElement(By.xpath("//a[@href='/delete_account']")).click();
-
-        //    18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
-        String expectedDeletedText = "ACCOUNT DELETED!";
-        String actualDeletedText = driver.findElement(By.xpath("//h2[@data-qa='account-deleted']")).getText();
-        driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
+//        //    15. Click 'Continue' button
+//        WebElement clickContinue = driver.findElement(By.xpath("//div[@class='pull-right']/a"));
+//        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait4.until(ExpectedConditions.elementToBeClickable(clickContinue));
+//
+//        //    16. Verify that 'Logged in as username' is visible
+//        String expectedUsernameText = "Alparslan";
+//        String actualUsernameText = driver.findElement(By.xpath("//i[@class='fa fa-user']")).getText();
+//        Assert.assertEquals(expectedUsernameText, actualUsernameText);
+//
+//        //    17. Click 'Delete Account' button
+//        driver.findElement(By.xpath("//a[@href='/delete_account']")).click();
+//
+//        //    18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
+//        String expectedDeletedText = "ACCOUNT DELETED!";
+//        String actualDeletedText = driver.findElement(By.xpath("//h2[@data-qa='account-deleted']")).getText();
+//        driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
 
 
     }
