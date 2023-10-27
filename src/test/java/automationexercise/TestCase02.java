@@ -25,7 +25,6 @@ public class TestCase02 {
         commonMethods = new CommonMethods(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
     }
 
     @Test

@@ -11,6 +11,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import utilities.Driver;
+
 import java.time.Duration;
 
 public class TestCase01 {
@@ -18,7 +20,6 @@ public class TestCase01 {
     WebDriver driver;
     CommonMethods commonMethods;
     Faker faker =new Faker();
-
 
     @Before
     public void setup() {
